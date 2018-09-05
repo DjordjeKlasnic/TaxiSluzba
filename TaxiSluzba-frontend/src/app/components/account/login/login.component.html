@@ -1,0 +1,33 @@
+<div class="backgroundimg">
+  <div class="rec">
+    <div style="padding: 10% 0 0 0" class="jumbotron" align="center">
+      <h3>Login</h3>
+      <hr style="margin-top: 6%">
+    </div>
+    <div style="margin-top: 10%;width: 55%;margin-left: 25%;">
+      <div class="input-group mb-3" >
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa fa-user fa-2x "></i>
+          </span>
+        </div>
+        <input class="form-control" id="username" name="username"
+               [(ngModel)]="username" placeholder="Username" aria-describedby="basic-addon1"
+               style="width: 50%" type="text">
+      </div>
+      <div class="input-group mb-3" style="margin-top: 2%">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon2">
+            <i class="fa fa-lock fa-2x "></i>
+          </span>
+        </div>
+        <input type="password" class="form-control" name="password"
+               [(ngModel)]="password" placeholder="Password" id="pass" aria-describedby="basic-addon2"
+               style="width: 50%">
+      </div>
+      <div class="input-group mb-3" style="margin-top: 24%">
+        <button class="btn btn-lg btn-dark" (click)="login()" style="margin-left: 65%">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
