@@ -15,14 +15,25 @@ namespace TaxiSluzba_backend.Models
         {
         }
 
-        public Driver(int iD, string username, string password, string firstName, string lastName, Gender gender, string jmbg, string phoneNumber, string email, UserRole role, List<Driving> drivings,Location l,Car c) : base(iD, username, password, firstName, lastName, gender, jmbg, phoneNumber, email, role, drivings)
+        public Driver(int iD, string username, string password, string firstName, string lastName, Gender gender, string jmbg, string phoneNumber, string email, UserRole role, Location l, Car c,List<int> drivings)
         {
+            ID = iD;
+            Username = username;
+            Password = password;
+            FirstName = firstName;
+            LastName = lastName;
+            Gender = gender;
+            Jmbg = jmbg;
+            PhoneNumber = phoneNumber;
+            Email = email;
+            Role = role;
             location = l;
             car = c;
+            Drivings = drivings;
         }
 
 
-        public Location Location { get => location; set => location = value; }
-        public Car Car { get => car; set => car = value; }
+        public Location Location { get { return location; } set { location = value; } }
+        public Car Car { get { return car; } set { car = value; } }
     }
 }

@@ -8,17 +8,23 @@ namespace TaxiSluzba_backend.Repository.RepositoryImpl
 {
     public class AddressRepository
     {
-        public List<Address> ReadAddress()
+        public List<Address> ReadAddresses()
         {
-            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Djole\Documents\Visual Studio 2017\Projects\TaxiSluzba_backend\TaxiSluzba_backend\Files\Addresses.txt");
-            List<Address> addresses = new List<Address>();
-            foreach (string line in lines)
+            if (System.IO.File.Exists(@"C:\Users\Djole\Documents\Visual Studio 2017\Projects\TaxiSluzba_backend\TaxiSluzba_backend\Files\Addresses.txt"))
             {
-                string[] userString = line.Split('|');
-                Address address = new Address(Int32.Parse(userString[0]), userString[1], userString[2], Int32.Parse(userString[3]));
-                addresses.Add(address);
+                string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Djole\Documents\Visual Studio 2017\Projects\TaxiSluzba_backend\TaxiSluzba_backend\Files\Addresses.txt");
+                List<Address> addresses = new List<Address>();
+                foreach (string line in lines)
+                {
+                    string[] userString = line.Split('|');
+                    if (userString.Count() != 4)
+                        return null;
+                    Address address = new Address(Int32.Parse(userString[0]), userString[1], userString[2], Int32.Parse(userString[3]));
+                    addresses.Add(address);
+                }
+                return addresses;
             }
-            return addresses;
+            return null;
         }
     }
 }

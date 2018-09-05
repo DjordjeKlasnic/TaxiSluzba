@@ -8,20 +8,20 @@ namespace TaxiSluzba_backend.Models
     public class Car
     {
         private int id;
-        private Driver driver;
+        private int driver;
         private int year;
         private string regNumber;
         private string taxiCarNumber;
         private Vehicle vehicle;
 
-        public int Id { get => id; set => id = value; }
-        public Driver Driver { get => driver; set => driver = value; }
-        public int Year { get => year; set => year = value; }
-        public string RegNumber { get => regNumber; set => regNumber = value; }
-        public string TaxiCarNumber { get => taxiCarNumber; set => taxiCarNumber = value; }
-        public Vehicle Vehicle { get => vehicle; set => vehicle = value; }
+        public int Id { get { return id; } set { id = value; } }
+        public int Driver { get { return driver; } set { driver = value; } }
+        public int Year { get { return year; } set { year = value; } }
+        public string RegNumber { get { return regNumber; } set { regNumber = value; } }
+        public string TaxiCarNumber { get { return taxiCarNumber; } set { taxiCarNumber = value; } }
+        public Vehicle Vehicle { get { return vehicle; } set { vehicle = value; } }
 
-        public Car(int id, Driver driver, int year, string regNumber, string taxiCarNumber, Vehicle vehicle)
+        public Car(int id, int driver, int year, string regNumber, string taxiCarNumber, Vehicle vehicle)
         {
             this.Id = id;
             Driver = driver;

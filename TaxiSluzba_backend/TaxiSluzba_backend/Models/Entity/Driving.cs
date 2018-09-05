@@ -20,17 +20,17 @@ namespace TaxiSluzba_backend.Models.Entity
         private Comment comment;
         private DrivingStatus drivingStatus;
 
-        public int Id { get => id; set => id = value; }
-        public DateTime Date { get => date; set => date = value; }
-        public Location StartLocation { get => startLocation; set => startLocation = value; }
-        public Vehicle Vehicle { get => vehicle; set => vehicle = value; }
-        public User Dispatcher { get => dispatcher; set => dispatcher = value; }
-        public Location DestinationLocation { get => destinationLocation; set => destinationLocation = value; }
-        public User Customer { get => customer; set => customer = value; }
-        public Driver Driver { get => driver; set => driver = value; }
-        public double Price { get => price; set => price = value; }
-        public Comment Comment { get => comment; set => comment = value; }
-        public DrivingStatus DrivingStatus { get => drivingStatus; set => drivingStatus = value; }
+        public int Id { get { return id; } set { id = value; } }
+        public DateTime Date { get { return date; } set { date = value; } }
+        public Location StartLocation { get { return startLocation; } set { startLocation = value; } }
+        public Vehicle Vehicle { get { return vehicle; } set { vehicle = value; } }
+        public User Dispatcher { get { return dispatcher; } set { dispatcher = value; } }
+        public Location DestinationLocation { get { return destinationLocation; } set { destinationLocation = value; } }
+        public User Customer { get { return customer; } set { customer = value; } }
+        public Driver Driver { get { return driver; } set { driver = value; } }
+        public double Price { get { return price; } set { price = value; } }
+        public Comment Comment { get { return comment; } set { comment = value; } }
+        public DrivingStatus DrivingStatus { get { return drivingStatus; } set { drivingStatus = value; } }
 
         public Driving(int id, DateTime date, Location startLocation, Vehicle vehicle, User dispatcher, Location destinationLocation, User customer, Driver driver, double price, Comment comment, DrivingStatus drivingStatus)
         {

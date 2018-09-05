@@ -12,10 +12,13 @@ namespace TaxiSluzba_backend.Models
         private int xCoordinate;
         private int yCoordinate;
 
-        public Address Address { get => address; set => address = value; }
-        public int XCoordinate { get => xCoordinate; set => xCoordinate = value; }
-        public int YCoordinate { get => yCoordinate; set => yCoordinate = value; }
-        public int Id { get => id; set => id = value; }
+        public Address Address {
+            get { return address; }
+            set { address = value; }
+        }
+        public int XCoordinate { get { return xCoordinate; } set { xCoordinate = value; } }
+        public int YCoordinate { get {return  yCoordinate; } set { yCoordinate = value; } }
+        public int Id { get { return id; } set { id = value; } }
 
         public Location(int id, Address address, int xCoordinate, int yCoordinate)
         {

@@ -18,32 +18,33 @@ namespace TaxiSluzba_backend.Models
         private string phoneNumber;
         private string email;
         private UserRole role;
-        private List<Driving> drivings;
+        private List<int> drivings;
         
 
-        public string Username { get => username; set => username = value; }
-        public string Password { get => password; set => password = value; }
-        public string FirstName { get => firstName; set => firstName = value; }
-        public string LastName { get => lastName; set => lastName = value; }
-        public string Jmbg { get => jmbg; set => jmbg = value; }
-        public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
-        public string Email { get => email; set => email = value; }
-        public UserRole Role { get => role; set => role = value; }
-        public List<Driving> Drivings { get => drivings; set => drivings = value; }
-        public int ID { get => iD; set => iD = value; }
+        public string Username { get { return username; } set { username = value; } }
+        public string Password { get { return password; } set { password = value; } }
+        public string FirstName { get { return firstName; } set { firstName = value; } }
+        public string LastName { get { return lastName; } set { lastName = value; } }
+        public string Jmbg { get { return jmbg; } set { jmbg = value; } }
+        public string PhoneNumber { get { return phoneNumber; } set { phoneNumber = value; } }
+        public string Email { get { return email; } set { email = value; } }
+        public UserRole Role { get { return role; } set { role = value; } }
+        public List<int> Drivings { get { return drivings; } set { drivings = value; } }
+        public int ID { get { return iD; } set { iD = value; } }
+        public Gender Gender { get { return gender; } set { gender = value; } }
 
         public User()
         {
         }
 
-        public User(int iD, string username, string password, string firstName, string lastName, Gender gender, string jmbg, string phoneNumber, string email, UserRole role, List<Driving> drivings)
+        public User(int iD, string username, string password, string firstName, string lastName, Gender gender, string jmbg, string phoneNumber, string email, UserRole role, List<int> drivings)
         {
             this.iD = iD;
             this.username = username;
             this.password = password;
             this.firstName = firstName;
             this.lastName = lastName;
-            this.gender = gender;
+            this.Gender = gender;
             this.jmbg = jmbg;
             this.phoneNumber = phoneNumber;
             this.email = email;
