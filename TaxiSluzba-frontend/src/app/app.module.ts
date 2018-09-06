@@ -8,22 +8,29 @@ import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
-import {UserService} from './services/user.service';
+import {UserService} from './services/user/user.service';
+import { AccountComponent } from './components/account/account.component';
+import {ToastrModule} from 'ngx-toastr';
+import {NavbarComponent} from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AccountComponent,
+    NavbarComponent
   ],
   imports: [
-
+    ToastrModule.forRoot({
+      preventDuplicates: true,
+    }),
     BrowserModule,
     RouterModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [ UserService],
   bootstrap: [AppComponent]

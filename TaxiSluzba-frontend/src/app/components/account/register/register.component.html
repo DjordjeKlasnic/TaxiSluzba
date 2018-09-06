@@ -13,51 +13,43 @@
            style="width: 40%;margin-left: 9.5%"/>
   </div>
 
-  <div class="form-group row" style="margin-top: 10%">
-    <label for="first_name">First name: </label>
-    <input type="text" class="form-control" name="first_name" id="first_name" [(ngModel)]="user.firstname" required
-           style="width: 40%;margin-left: 9%"/>
+  <div class="form-group row">
+    <label for="firstname">First name: </label>
+    <input type="text" class="form-control" name="firstname" id="firstname" [(ngModel)]="user.firstName" required
+           style="width: 40%;margin-left: 8.5%"/>
   </div>
 
   <div class="form-group row">
-    <label for="last_name">Last name: </label>
-    <input type="text" class="form-control" name="last_name" id="last_name" [(ngModel)]="user.lastname" required
-           style="width:40%;margin-left: 9%"/>
+    <label for="lastname">Last name: </label>
+    <input type="text" class="form-control" name="lastname" id="lastname" [(ngModel)]="user.lastName" required
+           style="width:40%;margin-left: 8.75%"/>
   </div>
   <div class="form-group row">
 
-    <label for="role">Gender: </label>
-    <select class="form-control" name="gender" [(ngModel)]="user.gender" id="role" style="width: 40%;margin-left: 14%">
+    <label for="gender">Gender: </label>
+    <select class="form-control" name="gender" [(ngModel)]="user.gender" id="gender" style="width: 40%;margin-left: 11%">
       <option>Male</option>
       <option>Female</option>
     </select>
 
   </div>
   <div class="form-group row">
+    <label for="jmbg">Jmbg: </label>
+    <input type="text" class="form-control" name="jmbg" id="jmbg" [(ngModel)]="user.jmbg" required
+           style="width: 40%;margin-left: 13%" />
+  </div>
+  <div class="form-group row">
+    <label for="phone">Phone number: </label>
+    <input type="text" class="form-control" name="phone" id="phone" [(ngModel)]="user.jmbg" required
+           style="width: 40%;margin-left: 5%" />
+  </div>
+  <div class="form-group row">
     <label for="email">Email: </label>
     <input type="email" class="form-control" name="email" id="email" [(ngModel)]="user.email" required
            style="width: 40%;margin-left: 13%" placeholder="example@example.com"/>
   </div>
-
-
-  <div class="form-group row">
-    <label for="expertise">Expertise: </label>
-    <select class="form-control" name="ve" [(ngModel)]="defaultValExpertise" id="expertise" style="width: 40%;margin-left: 14%">
-      <option *ngFor="let v of expertiseValues" [ngValue]="v">{{v}}</option>
-    </select>
-  </div>
-  <div class="form-group row">
-
-    <label for="role">Role: </label>
-    <select class="form-control" name="r" [(ngModel)]="defaultValue" id="role" style="width: 40%;margin-left: 14%">
-      <option *ngFor="let v of values" [ngValue]="v">{{v}}</option>
-    </select>
-
-  </div>
-
   <div style="margin-top: 10%">
-    <input type="button" class="btn btn-dark" routerLink="/account" value="Back"
-           style="float: left;margin: 3% 0 10% 0;">
+
     <input type="submit" class="btn btn-dark" (click)="registerUser()" value="Submit"
            style="float: right;margin:3% 5% 10% 0">
   </div>
